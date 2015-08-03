@@ -1,0 +1,69 @@
+/* Colors inspired by www.colourpod.com/post/93877466283/ */
+body {
+    background-color: #DAE5F0;
+    font-family: 'Abel', sans-serif;
+}
+
+.app {
+    max-width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+
+    nav {
+        background-color: #F6D8D4;
+        margin: 0.3em;
+        padding: 0.2em;
+        font-size: larger;
+
+        display: flex;
+        justify-content: flex-end;
+
+        .navbar-item {
+            margin: 0;
+            padding: 0;
+            a {
+                margin: 0.3em;
+                padding: 0.3em;
+                display: block;
+                text-decoration: none;
+                color: inherit;
+
+                transition: background 0.1s ease-in-out;
+            }
+            a.active {
+                background-color: #FFEDD6;
+            }
+            a:hover {
+                background-color: #FFEDD6;
+            }
+        }
+
+        .navbar-item:first-child {
+            margin-right: auto;
+        }
+    }
+    .entry-list-container {
+        display: flex;
+        justify-content: space-around;
+        .entry-editor {
+            min-width: 400px;
+            form {
+                display: flex;
+                flex-direction: column;
+                textarea {
+                    font-family: 'Anonymous Pro';
+                    resize: vertical;
+                }
+                input {
+                    font-family: 'Abel', sans-serif;
+                    font-size: larger;
+                }
+            }
+        }
+        .entry-list {
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+
