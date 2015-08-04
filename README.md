@@ -6,12 +6,13 @@ Just a project for me to learn about React and Redux.
 npm install
 ```
 You'll need the babel CLI tools if you don't already have them:
-`$ npm install --global babel`
+```
+$ npm install --global babel
+```
 
 ##Run
 ```
 gulp build
-npm run dev
 npm start
 ```
 
