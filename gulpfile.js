@@ -74,5 +74,5 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['styles', 'browserify-watch', 'watch']);
-gulp.task('build', ['styles', 'vendor', 'browserify']);
+gulp.task('build', ['styles', 'browserify']);
 
