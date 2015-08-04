@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { RouteHandler } from 'react-router';
 
-import { createRedux } from 'redux';
 import { Provider } from 'redux/react';
-import * as stores from '../stores';
-
-const redux = createRedux(stores);
 
 export default class MetaApp extends React.Component {
+  static propTypes = {
+    redux: PropTypes.object.isRequired
+  };
+
   render() {
     return (
-      <Provider redux={redux}>
+      <Provider redux={this.props.redux}>
         {() => <RouteHandler />}
       </Provider>
     );

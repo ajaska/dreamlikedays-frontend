@@ -19,7 +19,7 @@ gulp.task('browserify', function() {
   return browserify('app/main.js')
   // http://babeljs.io/docs/usage/experimental/
     .transform(babelify.configure({
-      optional: ["es7.classProperties", "es7.decorators"]
+      optional: ["es7.classProperties", "es7.decorators", "es7.asyncFunctions"]
      }))
     .bundle()
     .pipe(source('bundle.js'))
@@ -36,7 +36,7 @@ gulp.task('browserify-watch', function() {
   var bundler = watchify(browserify('app/main.js', watchify.args));
   // http://babeljs.io/docs/usage/experimental/
   bundler.transform(babelify.configure({
-    optional: ["es7.classProperties", "es7.decorators"]
+    optional: ["es7.classProperties", "es7.decorators", "es7.asyncFunctions"]
    }));
   bundler.on('update', rebundle);
   return rebundle();

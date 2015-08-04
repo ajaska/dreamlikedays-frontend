@@ -1,10 +1,6 @@
-import { ADD_ENTRY } from '../constants/ActionTypes';
+import { ADD_ENTRY, FETCH_ENTRIES } from '../constants/ActionTypes';
 
-const initialState = [{
-  title: 'whomp',
-  body: 'sample entry',
-  id: 0
-}];
+const initialState = [];
 
 export default function entries(state = initialState, action) {
   switch (action.type) {
@@ -14,7 +10,8 @@ export default function entries(state = initialState, action) {
         title: action.title,
         body: action.body
       }, ...state];
-
+    case FETCH_ENTRIES:
+      return action.entries;
     default:
       return state;
   }
